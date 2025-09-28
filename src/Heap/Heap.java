@@ -9,6 +9,8 @@ package Heap;
  2. leftChild:- (2*i)th index
  3. rightChild:- (2*i+1)th index
  4. Parent:- (i/2)th index
+
+ Above rules are for 1-based indexing
  */
 
 public class Heap {
@@ -63,7 +65,36 @@ public class Heap {
             }
         }
     }
+    // Time Complexity of building heap:- O(n)
+    public void heapify(int[] nums, int n, int i) {
+        int largest = i;
+        int leftIndex = 2 * i;
+        int rightIndex = 2 * i + 1;
 
+        if (leftIndex <= n && nums[largest] < nums[leftIndex]) {
+            largest = leftIndex;
+        }
+        if (rightIndex <= n && nums[largest] < nums[rightIndex]) {
+            largest = rightIndex;
+        }
+        if (largest != i) {
+            int temp = nums[largest];
+            nums[largest] = nums[i];
+            nums[i] = temp;
+            heapify(nums, n, largest);
+        }
+    }
+    // Time Complexity:- O(nlog n)
+    public void heapSort(int[] nums, int n){
+        int size = n;
+        while (size > 1){
+            int temp = nums[size];
+            nums[size] = nums[1];
+            nums[1] = temp;
+            size--;
+            heapify(nums, size, 1);
+        }
+    }
     public void print(){
         for (int i=1; i<=size; i++){
             System.out.print(arr[i]+ " ");
