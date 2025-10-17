@@ -6,6 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
         Pattern pattern = new Pattern();
-        pattern.print15(5);
+        pattern.print21(5);
     }
 }

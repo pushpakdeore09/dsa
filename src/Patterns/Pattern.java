@@ -315,4 +315,170 @@ public class Pattern {
             System.out.println();
         }
     }
+
+    /* Output */
+    /*
+    1        1
+    12      21
+    123    321
+    1234  4321
+    1234554321
+     */
+    public void print16(int n){
+        for(int i=0; i< n; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print(j+1);
+            }
+            for(int j=0; j<(2*(n-i-1)); j++){
+                System.out.print(" ");
+            }
+            for(int j=i; j>=0; j--){
+                System.out.print(j+1);
+            }
+            System.out.println();
+        }
+    }
+
+    /* Output */
+    /*
+        A
+       ABA
+      ABCBA
+     ABCDCBA
+     */
+    public void print17(int n){
+
+        for(int i=0; i<n; i++){
+            char c = 'A';
+            for(int j=0; j<n-i; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<i-1; j++){
+                System.out.print(c);
+                c+=1;
+            }
+            for(int j=0; j<i; j++){
+                System.out.print(c);
+                c-=1;
+            }
+            System.out.println();
+        }
+    }
+
+    /* Output */
+    /*
+    E
+    DE
+    CDE
+    BCDE
+    ABCDE
+     */
+    public void print18(int n){
+        for(int i=0; i<n; i++){
+            char c = (char) ('A' + (n - i - 1));
+            for(int j=0; j<=i; j++){
+                System.out.print((char)(c+j));
+
+            }
+            System.out.println();
+        }
+    }
+
+    /* Output */
+    /*
+     **********
+     ****  ****
+     ***    ***
+     **      **
+     *        *
+     *        *
+     **      **
+     ***    ***
+     ****  ****
+     **********
+     */
+    public void print19(int n){
+        for(int i=0; i<n/2; i++){
+            for(int j=0; j<(n/2)-i; j++){
+                System.out.print("*");
+            }
+            for(int j=0; j<2*i; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<(n/2)-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=0; i<n/2; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print("*");
+            }
+            for(int j=0; j<(n-(2*i))-2; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    /* Output */
+    /*
+     *        *
+     **      **
+     ***    ***
+     ****  ****
+     **********
+     ****  ****
+     ***    ***
+     **      **
+     *        *
+     */
+    public void print20(int n){
+        for(int i=0; i<(n/2)-1; i++){
+            for(int j=0; j<=i; j++){
+                System.out.print("*");
+            }
+            for(int j=0; j<(n-(2*i))-2; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<=i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for(int i=0; i<(n/2); i++){
+            for(int j=0; j<(n/2)-i; j++){
+                System.out.print("*");
+            }
+            for(int j=0; j<2*i; j++){
+                System.out.print(" ");
+            }
+            for(int j=0; j<(n/2)-i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
+    /* Output */
+    /*
+     *****
+     *   *
+     *   *
+     *   *
+     *****
+     */
+    public void print21(int n){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i==0 || j==0 || i== n-1 || j== n-1){
+                    System.out.print("*");
+                } else System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
 }
