@@ -1,12 +1,13 @@
-package LinkedList;
+package LinkedList.DoubleLinkedList;
+
 
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        SinglyLinkedList sll = new SinglyLinkedList();
-        while(true){
+        DoublyLinkedList dll = new DoublyLinkedList();
+        while (true) {
             System.out.println("\n1. Insert at first");
             System.out.println("2. Insert at last");
             System.out.println("3. Insert at index");
@@ -19,37 +20,37 @@ public class Main {
             int choice = sc.nextInt();
             int data = 0;
             int index = 0;
-            switch (choice){
+            switch (choice) {
                 case 1:
                     System.out.println("Enter data: ");
                     data = sc.nextInt();
-                    sll.insertAtFirst(data);
+                    dll.insertAtFirst(data);
                     break;
                 case 2:
                     System.out.println("Enter data: ");
                     data = sc.nextInt();
-                    sll.insertAtLast(data);
+                    dll.insertAtLast(data);
                     break;
                 case 3:
                     System.out.println("Enter data: ");
                     data = sc.nextInt();
                     System.out.println("Enter index: ");
                     index = sc.nextInt();
-                    sll.insertAtPosition(data, index);
+                    dll.insertAtPosition(data, index);
                     break;
                 case 4:
-                    sll.deleteAtFirst();
+                    dll.deleteAtFirst();
                     break;
                 case 5:
-                    sll.deleteAtLast();
+                    dll.deleteAtLast();
                     break;
                 case 6:
                     System.out.println("Enter index: ");
                     index = sc.nextInt();
-                    sll.deleteAtPosition(index);
+                    dll.deleteAtPosition(index);
                     break;
                 case 7:
-                    sll.display();
+                    dll.display();
                     break;
                 default:
                     System.exit(0);

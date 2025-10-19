@@ -1,4 +1,6 @@
-package LinkedList;
+package LinkedList.SingleLinkedList;
+
+import java.util.Scanner;
 
 public class SinglyLinkedList {
 
@@ -101,6 +103,7 @@ public class SinglyLinkedList {
         }
         System.out.print("x");
     }
+
 
 
 }
