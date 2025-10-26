@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Recursion recursion = new Recursion();
-        System.out.println(recursion.sumOfDigits(1234));
+        int[] arr = {3, 7, 1, 9, 2, 8, 5};
+        System.out.println(recursion.findMaxElement(arr, 0));
     }
 }

@@ -41,4 +41,19 @@ public class Recursion {
         return n % 10 + sumOfDigits(n / 10);
     }
 
+    public int countDigits(int n){
+        if(n < 10) return 1;
+        return 1+ countDigits(n/10);
+    }
+
+    public int sumOfArrayElements(int[] arr, int i){
+        if(i == arr.length) return 0;
+        return arr[i]+sumOfArrayElements(arr, i+1);
+    }
+
+    public int findMaxElement(int[] arr, int i){
+        if(i == arr.length-1) return arr[i];
+        return Math.max(arr[i], findMaxElement(arr, i+1));
+    }
+
 }
