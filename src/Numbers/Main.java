@@ -8,6 +8,6 @@ public class Main {
         Numbers numbers = new Numbers();
         System.out.print("Enter n: ");
         int n = sc.nextInt();
-        System.out.println(numbers.isStringNumber(n));
+        System.out.println(numbers.replaceZeroWithOddDigit(n));
     }
 }
